@@ -48,7 +48,7 @@ def predict():
     new_scaled=scaler.transform(new_patient)
 
     results=[]
-    for name,model,row in [("Logistic Regression",lr,new_scaled),("KNN",knn,new_scaled),("Naive Bayes",nb,new_patient)]:
+    for name,model,row in [("Logistic Regression",lr,new_scaled)]:
         results.append({"name":name,
                         "prediction":int(model.predict(row)[0]),
                         "probability":round(float(model.predict_proba(row)[0][1])*100,1)})
