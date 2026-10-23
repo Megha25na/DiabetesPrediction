@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diabetes Prediction</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Diabetes Prediction</h1>
+
+    <form id="form">
+      <label>Age</label>
+      <input type="number" id="age" min="1" max="120" step="any" required>
+
+      <label>Gender</label>
+      <select id="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <label>Hypertension</label>
+      <select id="hypertension">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+
+      <label>Heart disease</label>
+      <select id="heart_disease">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+
+      <label>Smoking history</label>
+      <select id="smoking_history">
+        <option value="never">never</option>
+        <option value="former">former</option>
+        <option value="current">current</option>
+        <option value="not current">not current</option>
+        <option value="ever">ever</option>
+        <option value="No Info">No Info</option>
+      </select>
+
+      <label>BMI</label>
+      <input type="number" id="bmi" min="10" max="100" step="any" required>
+
+      <label>HbA1c level</label>
+      <input type="number" id="hba1c" min="3" max="15" step="any" required>
+
+      <label>Blood glucose level</label>
+      <input type="number" id="glucose" min="50" max="500" step="any" required>
+
+      <button type="submit">Predict</button>
+    </form>
+
+    <div id="result"></div>
+    <p class="note">College project, not medical advice.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
